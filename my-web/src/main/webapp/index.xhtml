@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html">
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="#{msg.typeYourName}"/>
+                <h:inputText value="#{mainView.parameter}" />
+                <h:panelGroup>
+                    <h:commandButton value="#{msg.btnYes}" action="index"  />
+                    <h:commandButton value="#{msg.btnCancel}" action="#{mainView.cancel}" />
+                </h:panelGroup>
+            </h:panelGrid>
+            <h:outputText value="#{msg.greeting} #{mainView.parameter}" rendered="#{mainView.parameter != null}" />
+        </h:form>
+    </h:body>
+</html>
